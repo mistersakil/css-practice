@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  color: darkblue;
+}
+section {
+  background-color: hotpink;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* flex-flow: row wrap; */
+  /* justify-content: flex-end; */
+  /* align-items: stretch; */
+}
+
+section > div {
+  background-color: green;
+  border: 0.1rem solid gold;
+  margin: 2rem;
+  width: 40rem;
+  /* height: auto; */
+  /* text-align: center; */
+  /* line-height: 5rem; */
+  /* flex-grow: 1;
+  flex-shrink: 1; */
+  /* flex-basis: 40rem; */
+  flex: 1 1 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* section > div:nth-child(n + 3) {
+  height: 12rem;
+  background-color: rgb(57, 183, 241);
+}
+
+section > div:nth-child(2n) {
+  background-color: greenyellow;
+  height: 8rem;
+} */

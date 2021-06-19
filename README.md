@@ -1,11 +1,3 @@
-# React Bootstrap Responsive WebDesign
+# CSS Practice
 
-This is a test project
-
-## Used Libraries
-
-- React
-- Redux
-- React Redux
-- React Bootstrap
-- Bootstrap
+This is a css test project
