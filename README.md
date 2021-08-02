@@ -1,3 +1,3 @@
 # CSS Practice
 
-This is a css test project
+This is a css practice repo
