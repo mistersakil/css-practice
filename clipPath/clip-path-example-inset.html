@@ -87,9 +87,54 @@
       .box:hover p {
         color: rgb(86 86 234);
       }
+      .btnContainer {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .btnContainer button {
+        flex: 1 1 20%;
+        border: none;
+        outline: none;
+        height: 7rem;
+        background: chocolate;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 10;
+      }
+      .btnContainer button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: blue;
+        clip-path: circle(0px at center);
+        transition: all 1s linear;
+        z-index: -1;
+      }
+      .btnContainer button:nth-child(2):before {
+        clip-path: circle(0px at 0% 50%);
+      }
+      .btnContainer button:hover::before {
+        clip-path: circle(500px at center);
+      }
     </style>
   </head>
   <body>
+    <h1>Ripple Effect</h1>
+    <div class="btnContainer">
+      <button>Button 1</button>
+      <button>Button 2</button>
+      <button>Button 3</button>
+      <button>Button 4</button>
+      <button>Button 5</button>
+    </div>
     <h1>Css Clip Path Inset Example</h1>
     <div class="boxContainer">
       <div class="box">
