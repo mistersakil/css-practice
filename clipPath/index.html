@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="CSS Practice" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+    <title>Clip Path - CSS</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        padding: 20px;
+      }
+      img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        object-position: top;
+      }
+      #img1 {
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      }
+      #img2 {
+        clip-path: polygon(0% 30%, 100% 0%, 100% 80%, 0% 100%);
+      }
+      #img3 {
+        clip-path: polygon(50% 40%, 80% 60%, 50% 80%, 20% 60%);
+      }
+      #img4 {
+        clip-path: circle(50%);
+      }
+      .box img {
+        width: 400px;
+        height: 200px;
+        margin: 50px;
+      }
+      .box #img11 {
+        clip-path: polygon(100% 100%);
+        transition: all 0.5s linear;
+      }
+      .box:hover #img11 {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);
+      }
+      .box #img12 {
+        clip-path: inset(50px);
+        position: relative;
+      }
+      .box #img13 {
+        clip-path: inset(20px 30px 40px 50px round 15px 0);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS clip path example</h1>
+
+    <div class="box">
+      <h4>box1</h4>
+      <img src="./images/me2.jpg" alt="" id="img13" />
+      <img src="./images/me2.jpg" alt="" id="img12" />
+      <img src="./images/me2.jpg" alt="" id="img11" />
+    </div>
+    <div class="container">
+      <img src="./images/me2.jpg" alt="" />
+      <img src="./images/me2.jpg" alt="" id="img1" />
+      <img src="./images/me2.jpg" alt="" id="img2" />
+      <img src="./images/me2.jpg" alt="" id="img3" />
+      <img src="./images/me2.jpg" alt="" id="img4" />
+    </div>
+  </body>
+</html>

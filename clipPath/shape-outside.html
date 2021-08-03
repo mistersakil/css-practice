@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="CSS Practice" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+    <title>Clip Path - CSS</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .shape1,
+      .shape2,
+      .shape3,
+      .shape4,
+      .shape5 {
+        padding: 5rem 01rem;
+        width: 50%;
+        margin: 50px auto;
+      }
+      .shape1 img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        float: left;
+        shape-outside: circle(50%);
+        clip-path: circle(50%);
+        margin-right: 5%;
+      }
+      .shape1 p,
+      .shape2 p {
+        text-align: justify;
+      }
+      .shape2 img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        float: left;
+        margin: 50px;
+        shape-outside: circle(50%) margin-box;
+        border-radius: 50%;
+      }
+      .shape3 img {
+        width: 100px;
+        height: 50px;
+        object-fit: cover;
+        float: left;
+        shape-outside: content-box;
+        clip-path: circle(50%);
+        margin-right: 5%;
+        margin-top: 100px;
+      }
+      .shape4 img {
+        width: 100px;
+        height: 50px;
+        object-fit: cover;
+        float: left;
+        shape-outside: polygon(0 0, 100% 100%, 0 100%) content-box;
+        clip-path: polygon(0 0, 100% 100%, 0 100%);
+        shape-margin: 10px;
+      }
+      .shape5 img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        float: left;
+        shape-outside: circle(45%);
+        clip-path: circle(45%);
+        transition: all 1s linear;
+        margin: 20px 30px 0 0;
+      }
+      .shape5 img:hover {
+        shape-outside: circle(50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shape5">
+      <img src="./images/me2.jpg" alt="" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem
+        possimus ratione et nobis quam obcaecati, vitae pariatur ea facilis sit
+        suscipit nostrum adipisci delectus quia veniam voluptas soluta dolorum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem
+        possimus ratione et nobis quam obcaecati, vitae pariatur ea facilis sit
+        suscipit nostrum adipisci delectus quia veniam voluptas soluta dolorum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem
+        possimus ratione et nobis quam obcaecati, vitae pariatur ea facilis sit
+        suscipit nostrum adipisci delectus quia veniam voluptas soluta dolorum!
+      </p>
+    </div>
+    <div class="shape4">
+      <img src="./images/me2.jpg" alt="" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem
+        possimus ratione et nobis quam obcaecati, vitae pariatur ea facilis sit
+        suscipit nostrum adipisci delectus quia veniam voluptas soluta dolorum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem
+        possimus ratione et nobis quam obcaecati, vitae pariatur ea facilis sit
+        suscipit nostrum adipisci delectus quia veniam voluptas soluta dolorum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem
+        possimus ratione et nobis quam obcaecati, vitae pariatur ea facilis sit
+        suscipit nostrum adipisci delectus quia veniam voluptas soluta dolorum!
+      </p>
+    </div>
+    <div class="shape3">
+      <img src="./images/me2.jpg" alt="" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem
+        possimus ratione et nobis quam obcaecati, vitae pariatur ea facilis sit
+        suscipit nostrum adipisci delectus quia veniam voluptas soluta dolorum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem
+        possimus ratione et nobis quam obcaecati, vitae pariatur ea facilis sit
+        suscipit nostrum adipisci delectus quia veniam voluptas soluta dolorum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem
+        possimus ratione et nobis quam obcaecati, vitae pariatur ea facilis sit
+        suscipit nostrum adipisci delectus quia veniam voluptas soluta dolorum!
+      </p>
+    </div>
+    <div class="shape2">
+      <img src="./images/me2.jpg" alt="" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem
+        possimus ratione et nobis quam obcaecati, vitae pariatur ea facilis sit
+        suscipit nostrum adipisci delectus quia veniam voluptas soluta dolorum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem
+        possimus ratione et nobis quam obcaecati, vitae pariatur ea facilis sit
+        suscipit nostrum adipisci delectus quia veniam voluptas soluta dolorum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem
+        possimus ratione et nobis quam obcaecati, vitae pariatur ea facilis sit
+        suscipit nostrum adipisci delectus quia veniam voluptas soluta dolorum!
+      </p>
+    </div>
+    <div class="shape1">
+      <img src="./images/me2.jpg" alt="" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem
+        possimus ratione et nobis quam obcaecati, vitae pariatur ea facilis sit
+        suscipit nostrum adipisci delectus quia veniam voluptas soluta dolorum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem
+        possimus ratione et nobis quam obcaecati, vitae pariatur ea facilis sit
+        suscipit nostrum adipisci delectus quia veniam voluptas soluta dolorum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem
+        possimus ratione et nobis quam obcaecati, vitae pariatur ea facilis sit
+        suscipit nostrum adipisci delectus quia veniam voluptas soluta dolorum!
+      </p>
+    </div>
+  </body>
+</html>
