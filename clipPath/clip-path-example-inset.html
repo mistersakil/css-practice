@@ -20,6 +20,10 @@
         width: 70%;
         margin: 5rem auto;
       }
+      h1 {
+        margin: 2rem auto;
+        text-align: center;
+      }
       .boxContainer {
         display: flex;
         flex-direction: row;
@@ -30,7 +34,7 @@
       }
       .box {
         background-color: palevioletred;
-        flex: 1 1 30%;
+        flex: 1 1 20%;
         padding: 3rem 0;
         text-transform: capitalize;
         display: flex;
@@ -39,6 +43,12 @@
         align-items: center;
         position: relative;
         z-index: 10;
+        cursor: pointer;
+      }
+      h2,
+      p {
+        color: white;
+        transition: all 0.5s ease-in-out;
       }
       .box::before {
         content: "";
@@ -47,17 +57,40 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background: chartreuse;
+        background: greenyellow;
         clip-path: inset(0% 0% 100% 0%);
         z-index: -1;
         transition: all 0.5s linear;
       }
+      .box:nth-child(2):before {
+        clip-path: inset(0% 0% 0% 100%);
+      }
+      .box:nth-child(3):before {
+        clip-path: inset(100% 0% 0% 0%);
+      }
+      .box:nth-child(4):before {
+        clip-path: inset(0% 100% 0% 0%);
+      }
       .box:hover::before {
         clip-path: inset(0% 0% 0% 0%);
+      }
+      .box:nth-child(2):hover::before {
+        clip-path: inset(0% 0% 0% 0%);
+      }
+      .box:nth-child(3):hover::before {
+        clip-path: inset(0% 0% 0% 0%);
+      }
+      .box:nth-child(4):hover::before {
+        clip-path: inset(0% 0% 0% 0%);
+      }
+      .box:hover h2,
+      .box:hover p {
+        color: rgb(86 86 234);
       }
     </style>
   </head>
   <body>
+    <h1>Css Clip Path Inset Example</h1>
     <div class="boxContainer">
       <div class="box">
         <h2>users</h2>
@@ -70,6 +103,10 @@
       <div class="box">
         <h2>comments</h2>
         <p>10</p>
+      </div>
+      <div class="box">
+        <h2>projects</h2>
+        <p>150</p>
       </div>
     </div>
   </body>
