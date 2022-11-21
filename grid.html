@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="CSS Practice" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+    <title>CSS Practice</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 10fr 2fr 10fr;
+        grid-gap: 1rem;
+      }
+      .container div:nth-child(even) {
+        background-color: orange;
+      }
+      .container div:nth-child(odd) {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Css grid</h1>
+
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+  </body>
+</html>
