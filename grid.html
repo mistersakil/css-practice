@@ -7,30 +7,91 @@
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
     <title>CSS Practice</title>
     <style>
-      .container {
-        display: grid;
-        grid-template-columns: 2fr 3fr;
-        grid-template-rows: 10fr 2fr 10fr;
-        grid-gap: 1rem;
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        list-style-type: none;
       }
-      .container div:nth-child(even) {
+      /* .container {
+        height: calc(100vh - 100px);
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 40px auto 40px;
+      }
+      #header {
+        grid-column: 1 / -1;
+      }
+      #content {
+        grid-column: 2 / -1;
+      }
+      #footer {
+        grid-column: 1 / -1;
+      } */
+      .container {
+        height: calc(100vh - 100px);
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 50px 1fr 50px;
+        grid-template-areas:
+          "n n h h h h h h h h h h"
+          "n n c c c c c c c c c c"
+          "n n f f f f f f f f f f";
+      }
+      #header {
+        grid-area: h;
+      }
+      #navbar {
+        grid-area: n;
+      }
+      #content {
+        grid-area: c;
+      }
+      #footer {
+        grid-area: f;
+      }
+
+      .container div:nth-child(1) {
         background-color: orange;
       }
-      .container div:nth-child(odd) {
+      .container div:nth-child(2) {
         background-color: red;
+      }
+      .container div:nth-child(3) {
+        background-color: pink;
+      }
+      .container div:nth-child(4) {
+        background-color: green;
       }
     </style>
   </head>
   <body>
-    <h1>Css grid</h1>
+    <h1
+      style="
+        text-align: center;
+        font-size: 3rem;
+        line-height: 3rem;
+        padding: 20px;
+        height: 100px;
+        width: 100vw;
+      "
+    >
+      Css grid
+    </h1>
 
     <div class="container">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
+      <div id="header">
+        <h1>Header</h1>
+      </div>
+      <div id="navbar">
+        <h1>navbar</h1>
+      </div>
+      <div id="content">
+        <h1>content</h1>
+      </div>
+      <div id="footer">
+        <h1>footer</h1>
+      </div>
     </div>
   </body>
 </html>
