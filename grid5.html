@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="CSS Practice" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+    <title>Grid - 5</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      #heading {
+        height: 50px;
+        line-height: 50px;
+        width: 100%;
+        text-align: center;
+      }
+      .grid {
+        width: 100%;
+        height: calc(100vh - 50px);
+        border: 5px solid black;
+        display: grid;
+        grid-template-columns: repeat(3, 150px);
+        grid-auto-rows: 150px;
+        justify-content: center;
+        align-content: center;
+      }
+      .grid div:nth-child(even) {
+        background-color: red;
+      }
+      .grid div:nth-child(odd) {
+        background-color: green;
+      }
+      .grid div:nth-child(2n + 4) {
+        background-color: orange;
+      }
+      .grid div:nth-child(2n + 5) {
+        background-color: rgb(81, 81, 223);
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Grid</h1>
+    <section class="grid">
+      <div class="box1">box1</div>
+      <div class="box2">box2</div>
+      <div class="box3">box3</div>
+      <div class="box4">box4</div>
+      <div class="box5">box5</div>
+      <div class="box6">box6</div>
+      <div class="box7">box7</div>
+      <div class="box8">box8</div>
+      <div class="box9">box9</div>
+    </section>
+  </body>
+</html>
