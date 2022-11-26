@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="CSS Practice" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+    <title>Grid - 4</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      #heading {
+        height: 50px;
+        line-height: 50px;
+        width: 100%;
+        text-align: center;
+      }
+      .grid {
+        width: 100%;
+        height: calc(100vh - 50px);
+        border: 5px solid black;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 2fr 2fr 1fr;
+        grid-gap: 5%;
+        padding: 10px;
+      }
+      .navbar {
+        background-color: red;
+        grid-column: 1/-1;
+      }
+      .sidebar {
+        background-color: rgb(235, 220, 90);
+        grid-row: 2 / span 2;
+      }
+      .box1 {
+        background-color: rgb(73, 238, 51);
+      }
+      .box2 {
+        background-color: rgb(14, 165, 157);
+      }
+      .box3 {
+        background-color: rgb(4, 128, 201);
+      }
+      .main {
+        background-color: rgb(199, 10, 189);
+        grid-column: 2/-1;
+      }
+      .footer {
+        background-color: rgb(122, 111, 8);
+        grid-column: 1/-1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Grid</h1>
+    <section class="grid">
+      <nav class="navbar">navbar</nav>
+      <aside class="sidebar">sidebar</aside>
+      <article class="box1">box1</article>
+      <article class="box2">box2</article>
+      <article class="box3">box3</article>
+      <main class="main">main content</main>
+      <footer class="footer">footer</footer>
+    </section>
+  </body>
+</html>
